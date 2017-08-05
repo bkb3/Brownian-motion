@@ -12,6 +12,6 @@ I will be coming up with more good stuffs like these.
 # TO DO
   - 3D version, maybe? :D
   
-#LICENSE
+# LICENSE
   -GNU GPL v3 or later on your opinion.
  
