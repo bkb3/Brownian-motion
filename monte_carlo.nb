@@ -1,0 +1,21 @@
+With[
+ {maxiterations = 1000},
+ pts = Transpose@(*Transpose the generated 2 sets of random numbers as a set of coordinates*)
+   Table[(*Generate a table for x and y coordinates*)
+    Accumulate[(*Add successive steps*)
+     RandomVariate[
+      NormalDistribution[0, 1], maxiterations(* 
+      NormalDistribution with mean 0 and sd 1 is used for simple Monte-Carlo generation of random numbers *)
+      ]
+     ]
+    , {2}
+    ];
+ Animate[
+  ListLinePlot[
+   pts[[1 ;; 
+      steps]](*Pick 1st to (;;) required number of coordinates*)
+   , PlotRange -> Automatic, Axes -> False
+   ]
+  , {steps, 1, maxiterations, 1}
+  ]
+ ]
