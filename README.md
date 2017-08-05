@@ -13,5 +13,5 @@ I will be coming up with more good stuffs like these.
   - 3D version, maybe? :D
   
 # LICENSE
-  -GNU GPL v3 or later on your opinion.
+  - GNU GPL v3.0 or later on your opinion
  
