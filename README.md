@@ -3,9 +3,6 @@ A sequence of random numbers can be a very simple Monte Carlo simulation. For in
 
 Unlike everwhere in the internet, I've used random numbers using a normal distribution for both x and y coordinates of the particle which are successively sumed with other points to give a path. I tried interpolating among the points but the results were not so impressive as this one.
 
-I was planning to do something like this since ages but just got the time, so here you go!
-I will be coming up with more good stuffs like these.
-
 # SCREENSHOT
   - ![image](http://i.imgur.com/oLi5zC0.png)
   
