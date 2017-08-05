@@ -5,7 +5,7 @@ With[
     Accumulate[(*Add successive steps*)
      RandomVariate[
       NormalDistribution[0, 1], maxiterations(* 
-      NormalDistribution with mean 0 and sd 1 is used for simple Monte-Carlo generation of random numbers *)
+      NormalDistribution with mean 0 and sd 1 is used for simple Monte Carlo generation of random numbers *)
       ]
      ]
     , {2}
