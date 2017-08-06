@@ -5,11 +5,15 @@ Unlike everwhere in the internet, I've used random numbers using a normal distri
 
 # SCREENSHOT
    2D version
+   
+   
    ![image](http://i.imgur.com/mHG5TVW.gif)
   
-    
-   3D version 
+   
+   3D version
+   
    ![image](http://i.imgur.com/Ohjb1Tt.png)
+
   
 # TO DO
   - ~~3D version, maybe? :D~~ Done. Check the brownian3d.nb in the sources!
