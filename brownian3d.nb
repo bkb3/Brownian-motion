@@ -1,0 +1,33 @@
+(*This is exactly as the previous 2D brownian motion. The only difference being the points are now rendered in 3D*)
+
+data = Transpose@Table[
+    Accumulate[
+     RandomVariate[
+      NormalDistribution[0, 1], 1000]
+     ]
+    , {4}
+    ];
+points = data[[All, 2 ;; 4]];
+Manipulate[
+ Graphics3D[
+  Dynamic@{
+    {
+     GrayLevel[.7], Line[points[[1 ;; steps]]]
+     }
+    ,
+    {
+     Blue, PointSize[.01], Point[points[[steps]]]
+     }
+    },
+  Background -> Black, ImageSize -> Large, Lighting -> "Neutral", ViewPoint -> (6 + 5 Cos[steps/50]) {Cos[steps/100.], 
+     Sin[steps/100.], Sin[steps/200]}, BoxRatios -> {1, 1, 1}, 
+  ImageSize -> 400, PlotRange -> Automatic, SphericalRegion -> True
+  ], Row[
+  {
+   Control[
+    {steps, 1, Length[data], 1, AnimationRunning -> False, 
+     AnimationRate -> 10, AnimationRepetitions -> 1}
+    ]
+   }
+  ]
+ ]
