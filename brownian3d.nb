@@ -1,31 +1,32 @@
 (*This is exactly as the previous 2D brownian motion. The only difference being the points are now rendered in 3D*)
 
-data = Transpose@Table[
-    Accumulate[
+points = Transpose@Table[
+    Accumulate[(*Add them to get a path*)
      RandomVariate[
-      NormalDistribution[0, 1], 1000]
+      NormalDistribution[0, 1], 1000] (*Generate 1000 random  set of {x,y,z} coordinates*)
      ]
-    , {4}
+    , {3} (*Create x,y,z coordinates randomly*)
     ];
-points = data[[All, 2 ;; 4]];
 Manipulate[
  Graphics3D[
   Dynamic@{
     {
-     GrayLevel[.7], Line[points[[1 ;; steps]]]
+     GrayLevel[.7],(*Bit of grayscale for clarity of path in dark background*) 
+     Line[points[[1 ;; steps]]] (*Choose coordinates from our generated points[] 1 to steps we like*)
      }
     ,
     {
-     Blue, PointSize[.01], Point[points[[steps]]]
+     Blue, PointSize[.01], Point[points[[steps]]](*particle is animated as blue dot whiose position is the current point specified by steps*)
      }
     },
-  Background -> Black, ImageSize -> Large, Lighting -> "Neutral", ViewPoint -> (6 + 5 Cos[steps/50]) {Cos[steps/100.], 
-     Sin[steps/100.], Sin[steps/200]}, BoxRatios -> {1, 1, 1}, 
+  Background -> Black, ImageSize -> Large, Lighting -> "Neutral", 
+  ViewPoint -> (6 + 5 Cos[steps/50]) {Cos[steps/100.], 
+     Sin[steps/100.], Sin[steps/200]}, BoxRatios -> {1, 1, 1}, (*For nice camera pan*)
   ImageSize -> 400, PlotRange -> Automatic, SphericalRegion -> True
   ], Row[
   {
    Control[
-    {steps, 1, Length[data], 1, AnimationRunning -> False, 
+    {steps, 1, Length[points], 1, AnimationRunning -> False, 
      AnimationRate -> 10, AnimationRepetitions -> 1}
     ]
    }
