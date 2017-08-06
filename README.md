@@ -7,7 +7,7 @@ Unlike everwhere in the internet, I've used random numbers using a normal distri
   - 2D version
   - ![image](http://i.imgur.com/mHG5TVW.gif)
   
-  
+    
   - 3D version 
   - ![image](http://i.imgur.com/Ohjb1Tt.png)
   
