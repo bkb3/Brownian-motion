@@ -10,7 +10,7 @@ Unlike everwhere in the internet, I've used random numbers using a normal distri
    ![image](http://i.imgur.com/mHG5TVW.gif)
   
    
-   3D version. (only 300 frames rendered, painstakingly- took quite some time on my computer lol & don't even mention the frequent pwercuts here!)
+   3D version. (only 300 frames rendered, painstakingly- took quite some time on my computer lol & don't even mention the frequent powercuts here!)
    
    ![image](http://imgur.com/download/cL5vfF9)
 
